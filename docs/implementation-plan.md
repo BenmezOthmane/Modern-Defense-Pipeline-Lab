@@ -35,3 +35,14 @@ This document describes the step-by-step implementation plan for building the SO
 - Verify log ingestion
 
 ---
+
+## 🧪 Phase 4: Detection Engineering
+
+### Tasks:
+- Create custom Wazuh rules:
+  - Brute force detection
+  - Suspicious PowerShell execution
+  - Registry modification detection
+- Test rule triggering
+
+---
