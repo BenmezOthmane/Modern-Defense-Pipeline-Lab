@@ -116,3 +116,29 @@ The goal is to simulate real-world attacker behavior and demonstrate how a SOC a
 
 ---
 
+# 🧠 Summary
+
+This attack flow simulates a full cyber attack lifecycle:
+
+- Reconnaissance (Port Scanning)
+- Initial Access (Brute Force)
+- Execution (PowerShell)
+- Persistence (Registry Modification)
+- Privilege Escalation
+
+---
+
+## 🎯 Final Goal
+
+The purpose of this lab is to demonstrate:
+
+- Real-world SOC monitoring workflow
+- Log collection and correlation using SIEM
+- Detection engineering using behavioral rules
+- Incident investigation process
+
+---
+
+# 📌 Notes
+
+All attacks are performed in a controlled virtual environment for educational and demonstration purposes only.
