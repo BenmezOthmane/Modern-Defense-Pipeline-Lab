@@ -34,3 +34,25 @@ The goal is to simulate real-world attacker behavior and demonstrate how a SOC a
 - Trigger alerts based on failed login thresholds
 
 ---
+
+## 2. Suspicious PowerShell Execution
+
+### 🧭 Flow Description
+
+1. Attacker executes PowerShell commands on compromised Windows machine.
+2. Commands may include encoded or obfuscated scripts.
+3. Windows logs record PowerShell execution events.
+4. Sysmon captures process creation and command-line arguments.
+5. Wazuh agent collects event logs.
+6. SIEM analyzes behavior for suspicious patterns.
+7. Detection rule triggers alert for abnormal PowerShell usage.
+8. SOC analyst investigates command execution history.
+
+### 🎯 Detection Objective
+
+- Detect fileless malware techniques
+- Monitor suspicious PowerShell usage
+- Identify encoded or unusual command execution
+
+---
+
