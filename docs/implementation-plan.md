@@ -32,8 +32,6 @@ This document describes the step-by-step implementation plan for building the SO
 - Configure Wazuh Manager
 - Install and configure Wazuh Dashboard (Kibana/OpenSearch interface)
 - Open required ports (for agent communication)
-- Connect Windows and Linux agents to the SIEM
-- Verify log ingestion from all endpoints
 
 ---
 
