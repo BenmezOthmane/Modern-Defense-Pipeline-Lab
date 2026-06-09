@@ -35,3 +35,17 @@ Windows Endpoint
 
 ---
 
+## 3. Detection Workflow
+
+Collected logs are analyzed by Wazuh.
+
+Workflow:
+
+Log Received
+→ Rule Matching
+→ Event Correlation
+→ Alert Generation
+→ Dashboard Visualization
+
+---
+
