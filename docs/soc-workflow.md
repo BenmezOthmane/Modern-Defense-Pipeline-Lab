@@ -18,3 +18,20 @@ The simulated attack lifecycle follows common attacker behavior:
 
 ---
 
+## 2. Log Collection Workflow
+
+Security events are collected from multiple sources:
+
+- Windows Event Logs
+- Sysmon Operational Logs
+- Wazuh Agent
+
+Workflow:
+
+Windows Endpoint
+→ Sysmon / Event Logs
+→ Wazuh Agent
+→ Wazuh Manager
+
+---
+
