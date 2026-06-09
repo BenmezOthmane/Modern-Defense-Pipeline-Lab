@@ -52,29 +52,24 @@ The lab replicates a small enterprise network where logs are collected, analyzed
 
 ---
 
-## ⚔️ Attack Scenarios
+## ⚔️ Attack Lifecycle Scenarios
 
-### 1. Credential Attacks (Brute Force / Password Spraying)
-- Target: SSH / RDP services
-- SOC Level: Tier 1 Detection
-- Purpose: Detect abnormal authentication patterns
+This lab simulates a full cyber attack chain following real-world attacker behavior:
 
-### 2. Network Reconnaissance (Port Scanning)
-- Target: exposed services
-- SOC Level: Early threat detection
-- Purpose: Identify reconnaissance activity before intrusion
+### 1. Reconnaissance
+- Port scanning to identify exposed services
 
-### 3. Execution of Suspicious PowerShell
-- SOC Level: High-frequency Windows attack vector
-- Purpose: Detect fileless malware behavior
+### 2. Initial Access
+- Brute force / password spraying attacks
 
-### 4. Persistence via Registry Modification
-- SOC Level: Post-compromise behavior
-- Purpose: Identify malware persistence techniques
+### 3. Execution
+- Suspicious PowerShell commands execution
 
-### 5. Privilege Escalation Simulation
-- SOC Level: Incident Response
-- Purpose: Simulate attacker gaining elevated access
+### 4. Persistence
+- Registry modifications for long-term access
+
+### 5. Privilege Escalation
+- Gaining elevated system privileges after compromise
 
 ---
 
