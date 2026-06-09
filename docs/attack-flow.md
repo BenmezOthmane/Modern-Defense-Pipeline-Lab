@@ -76,3 +76,22 @@ The goal is to simulate real-world attacker behavior and demonstrate how a SOC a
 
 ---
 
+## 4. Persistence via Registry Modification
+
+### 🧭 Flow Description
+
+1. Attacker modifies Windows Registry keys (Run / Startup).
+2. Changes are made to ensure persistence after reboot.
+3. Sysmon Event ID logs registry modifications.
+4. Wazuh collects registry-related events.
+5. SIEM detects suspicious changes in persistence locations.
+6. Alert is triggered for potential malware persistence.
+7. SOC analyst verifies registry changes.
+
+### 🎯 Detection Objective
+
+- Detect persistence mechanisms
+- Monitor critical registry modifications
+- Identify malware survival techniques
+
+---
