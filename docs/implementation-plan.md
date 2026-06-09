@@ -67,3 +67,13 @@ This document describes the step-by-step implementation plan for building the SO
 
 ---
 
+## 🚨 Phase 7: Incident Analysis
+
+### Tasks:
+- Investigate generated alerts
+- Correlate logs
+- Determine attack timeline
+- Document findings
+
+---
+
