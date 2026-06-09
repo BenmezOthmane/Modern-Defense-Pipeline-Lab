@@ -25,3 +25,13 @@ This document describes the step-by-step implementation plan for building the SO
 - Install Wazuh agent on endpoints
 
 ---
+
+## 📡 Phase 3: SIEM Deployment
+
+### Tasks:
+- Install Wazuh Server
+- Configure Wazuh Manager
+- Connect agents to SIEM
+- Verify log ingestion
+
+---
