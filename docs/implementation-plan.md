@@ -16,3 +16,12 @@ This document describes the step-by-step implementation plan for building the SO
 
 ---
 
+## 🔐 Phase 2: Endpoint Security Setup
+
+### Tasks:
+- Install Sysmon on Windows machines
+- Configure Sysmon logging rules
+- Enable Windows Event Logging
+- Install Wazuh agent on endpoints
+
+---
