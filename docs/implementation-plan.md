@@ -46,3 +46,14 @@ This document describes the step-by-step implementation plan for building the SO
 - Test rule triggering
 
 ---
+
+## ⚔️ Phase 5: Attack Simulation
+
+### Tasks:
+- Simulate port scanning (Nmap)
+- Perform brute force attacks (SSH / RDP)
+- Execute PowerShell payloads
+- Modify registry keys for persistence
+
+---
+
