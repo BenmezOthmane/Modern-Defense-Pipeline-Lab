@@ -95,3 +95,24 @@ The goal is to simulate real-world attacker behavior and demonstrate how a SOC a
 - Identify malware survival techniques
 
 ---
+
+## 5. Privilege Escalation Simulation
+
+### 🧭 Flow Description
+
+1. Attacker gains initial access to system.
+2. Attempts to elevate privileges to administrator level.
+3. System logs record privilege changes.
+4. Sysmon captures process elevation events.
+5. Wazuh SIEM analyzes privilege escalation behavior.
+6. High severity alert is generated.
+7. SOC analyst performs incident investigation.
+
+### 🎯 Detection Objective
+
+- Detect unauthorized privilege escalation
+- Identify post-compromise behavior
+- Trigger high severity incident response
+
+---
+
