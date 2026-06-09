@@ -69,3 +69,6 @@ Alert
 
 ---
 
+## Summary
+
+This workflow demonstrates the complete SOC process from attack simulation to detection and incident investigation.
