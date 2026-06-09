@@ -21,7 +21,7 @@ The lab replicates a small enterprise network where logs are collected, analyzed
 
 ## 🏗️ Architecture
 
-![SOC Architecture](docs/Architecture_Diagram.png)
+![SOC Architecture](Modern-Defense-Pipeline-Lab/docs/Architecture_Diagram.png)
 
 ### Components:
 - Windows Server (Active Directory Domain Controller)
