@@ -9,24 +9,14 @@ This document describes the step-by-step implementation plan for building the SO
 ### Tasks:
 - Install VMware
 - Create virtual machines:
-  - Windows Server (Active Directory)
-  - Windows 10 Endpoint
-  - Kali Linux Attacker
+- Windows Server (Active Directory)
+- Windows 10 Endpoint
+- Kali Linux Attacker
 - Configure internal network (Host-only / NAT network)
 
 ---
 
-## 🔐 Phase 2: Endpoint Security Setup
-
-### Tasks:
-- Install Sysmon on Windows machines
-- Configure Sysmon logging rules
-- Enable Windows Event Logging
-- Install Wazuh agent on endpoints
-
----
-
-## 📡 Phase 3: SIEM Deployment (Wazuh Server)
+## 📡 Phase 2: SIEM Deployment (Wazuh Server)
 
 ### 🖥️ Environment
 - Ubuntu Server (VM) will be used as the SIEM host
@@ -47,7 +37,27 @@ This document describes the step-by-step implementation plan for building the SO
 
 ---
 
-## 🧪 Phase 4: Detection Engineering
+## 🔐 Phase 3: Endpoint Security Setup
+
+### Tasks:
+- Install Sysmon on Windows machines
+- Configure Sysmon logging rules
+- Enable Windows Event Logging
+- Install Wazuh agent on endpoints
+
+---
+
+## ⚔️ Phase 4: Attack Simulation
+
+### Tasks:
+- Simulate port scanning (Nmap)
+- Perform brute force attacks (SSH / RDP)
+- Execute PowerShell payloads
+- Modify registry keys for persistence
+
+---
+
+## 🧪 Phase 5: Detection Engineering
 
 ### Tasks:
 - Create custom Wazuh rules:
@@ -55,16 +65,6 @@ This document describes the step-by-step implementation plan for building the SO
   - Suspicious PowerShell execution
   - Registry modification detection
 - Test rule triggering
-
----
-
-## ⚔️ Phase 5: Attack Simulation
-
-### Tasks:
-- Simulate port scanning (Nmap)
-- Perform brute force attacks (SSH / RDP)
-- Execute PowerShell payloads
-- Modify registry keys for persistence
 
 ---
 
