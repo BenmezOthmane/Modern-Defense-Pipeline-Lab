@@ -1,16 +1,20 @@
-# Implementation Plan
+# SOC Workflow
 
-Phase 1:
-- Setup environment
+## Overview
 
-Phase 2:
-- Install Suricata
+This document describes how security events are generated, collected, analyzed, and investigated within the SOC lab environment.
 
-Phase 3:
-- Install Wazuh
+---
 
-Phase 4:
-- Integration
+## 1. Attack Lifecycle
 
-Phase 5:
-- Testing
+The simulated attack lifecycle follows common attacker behavior:
+
+1. Port Scanning (Reconnaissance)
+2. Brute Force / Password Spraying (Initial Access)
+3. Suspicious PowerShell Execution (Execution)
+4. Registry Persistence (Persistence)
+5. Privilege Escalation (Privilege Escalation)
+
+---
+
