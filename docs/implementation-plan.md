@@ -7,7 +7,7 @@ This document describes the step-by-step implementation plan for building the SO
 ## 🏗️ Phase 1: Lab Environment Setup
 
 ### Tasks:
-- Install VirtualBox / VMware
+- Install VMware
 - Create virtual machines:
   - Windows Server (Active Directory)
   - Windows 10 Endpoint
@@ -26,13 +26,24 @@ This document describes the step-by-step implementation plan for building the SO
 
 ---
 
-## 📡 Phase 3: SIEM Deployment
+## 📡 Phase 3: SIEM Deployment (Wazuh Server)
+
+### 🖥️ Environment
+- Ubuntu Server (VM) will be used as the SIEM host
+- Wazuh will be installed on this server as the central monitoring platform
+
+---
 
 ### Tasks:
-- Install Wazuh Server
+
+- Install Ubuntu Server (VM)
+- Update system packages
+- Install Wazuh Server on Ubuntu
 - Configure Wazuh Manager
-- Connect agents to SIEM
-- Verify log ingestion
+- Install and configure Wazuh Dashboard (Kibana/OpenSearch interface)
+- Open required ports (for agent communication)
+- Connect Windows and Linux agents to the SIEM
+- Verify log ingestion from all endpoints
 
 ---
 
