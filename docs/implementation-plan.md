@@ -1,7 +1,18 @@
-# Scope
+## 🧠 Overview
 
-Included:
-- Network traffic monitoring
-- IDS detection (Suricata)
-- Log analysis (Wazuh)
-- Incident response simulation
+This document describes the step-by-step implementation plan for building the SOC detection and response lab using Wazuh SIEM, Windows endpoints, and Kali Linux.
+
+---
+
+## 🏗️ Phase 1: Lab Environment Setup
+
+### Tasks:
+- Install VirtualBox / VMware
+- Create virtual machines:
+  - Windows Server (Active Directory)
+  - Windows 10 Endpoint
+  - Kali Linux Attacker
+- Configure internal network (Host-only / NAT network)
+
+---
+
