@@ -57,3 +57,13 @@ This document describes the step-by-step implementation plan for building the SO
 
 ---
 
+## 📊 Phase 6: Monitoring & Dashboards
+
+### Tasks:
+- Build Wazuh dashboards
+- Visualize alerts
+- Monitor authentication failures
+- Track suspicious activities
+
+---
+
