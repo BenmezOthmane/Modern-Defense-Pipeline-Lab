@@ -49,3 +49,23 @@ Log Received
 
 ---
 
+## 4. Incident Response Workflow
+
+Once an alert is generated, the SOC analyst follows a structured process:
+
+1. Triage
+2. Investigation
+3. Validation
+4. Severity Classification
+5. Reporting
+
+Workflow:
+
+Alert
+→ Triage
+→ Investigation
+→ Validation
+→ Report
+
+---
+
