@@ -56,3 +56,23 @@ The goal is to simulate real-world attacker behavior and demonstrate how a SOC a
 
 ---
 
+## 3. Network Reconnaissance (Port Scanning)
+
+### 🧭 Flow Description
+
+1. Attacker scans target network using tools like Nmap.
+2. Multiple connection attempts are made across ports.
+3. Firewall / system logs record scanning behavior.
+4. Logs are collected via Wazuh agent.
+5. SIEM detects high-frequency connection attempts.
+6. Alert is generated for potential reconnaissance activity.
+7. SOC analyst reviews source IP and scan pattern.
+
+### 🎯 Detection Objective
+
+- Identify reconnaissance before intrusion
+- Detect abnormal port scanning activity
+- Provide early warning signals
+
+---
+
