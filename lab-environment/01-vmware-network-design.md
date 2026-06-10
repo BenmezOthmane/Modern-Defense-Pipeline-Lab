@@ -10,6 +10,7 @@
 
 ## Netwok Architecture
 
+```
                 [ Kali Linux ]
                       |
                       |
@@ -20,3 +21,6 @@
         |             |              |
         -------- Host-Only Network ------
                    (10.0.0.0/24)
+
+```
+                   
