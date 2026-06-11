@@ -1,106 +1,117 @@
-# Modern SOC Detection & Response Lab (Wazuh SIEM)
+# Modern Defense Pipeline Lab
 
-## 🧠 Overview
+## Overview
 
-This project is a fully simulated Security Operations Center (SOC) environment designed to demonstrate real-world security monitoring, detection engineering, and incident response workflows using open-source tools.
+Modern Defense Pipeline Lab is a hands-on cybersecurity project designed to simulate a small enterprise security environment.
 
-The lab replicates a small enterprise network where logs are collected, analyzed, and used to detect malicious activities such as brute-force attacks and system persistence techniques.
+The goal of this lab is to demonstrate the full workflow of a security analyst: from detection engineering and attack simulation to alert validation, investigation, incident response, and final reporting.
 
----
+## Project Goal
 
-## 🎯 Objectives
+This project builds a realistic defensive pipeline where security events are collected from monitored endpoints, analyzed inside a SIEM, matched against detection rules, and investigated as security incidents.
 
-- Build a realistic SOC home lab environment
-- Centralize log collection using a SIEM (Wazuh)
-- Generate and analyze security events from multiple endpoints
-- Detect malicious activities using custom rules
-- Simulate real attack scenarios using Kali Linux
-- Practice incident detection and response workflows
+The lab focuses on documenting the complete journey:
 
----
+```text
+Detection Rules
+-> Attack Simulation
+-> Alert Generation
+-> Analyst Triage
+-> Incident Response
+-> Incident Report
+```
 
-## 🏗️ Architecture
+## Lab Environment
 
-![Architecture](./docs/Architecture_Diagram.png)
+The lab uses the following systems:
 
-### Components:
-- Windows Server (Active Directory Domain Controller)
-- Windows 10 Endpoint (User Machine)
-- Kali Linux (Attacker Machine)
-- Wazuh SIEM (Monitoring & Detection Platform)
-- Sysmon (Advanced Windows Logging)
+| System | Role |
+|---|---|
+| Windows 10 Pro | Target endpoint monitored by Wazuh Agent |
+| Windows Server Datacenter 2022 | Active Directory domain controller |
+| Kali Linux | Attacker machine used for controlled simulations |
+| Ubuntu Server | SIEM server running Wazuh Manager with Docker |
 
----
+## Tools And Technologies
 
-## ⚙️ Tech Stack
-
-- Wazuh SIEM
+- Wazuh Manager
+- Wazuh Agent
+- Wazuh Dashboard
+- Docker
 - Sysmon
-- Windows Server / Windows 10
-- Kali Linux
-- VMware
+- Windows Security Logs
+- Active Directory
+- Kali Linux attack tools
+- MITRE ATT&CK
 
----
+## Detection Scenarios
 
-## 🔄 Data Flow
+The project will include detection and validation for the following scenarios:
 
-1. Endpoints generate security logs (Windows Event Logs + Sysmon)
-2. Wazuh agents collect and forward logs
-3. Wazuh manager processes and normalizes events
-4. Detection rules analyze suspicious behavior
-5. Alerts are generated and visualized in dashboards
+| Scenario | Purpose |
+|---|---|
+| Port Scan Detection | Identify reconnaissance activity against exposed services |
+| Brute Force Detection | Detect repeated authentication failures |
+| Suspicious PowerShell Detection | Detect suspicious command execution and possible payload activity |
+| Registry Persistence Detection | Detect persistence through Windows autorun registry keys |
+| Privilege Escalation Detection | Detect suspicious privilege or admin group changes |
 
----
+## Architecture
 
-## ⚔️ Attack Lifecycle Scenarios
+```mermaid
+flowchart LR
+    Kali["Kali Linux<br>Attacker"] --> Win10["Windows 10 Pro<br>Target Endpoint"]
+    WinServer["Windows Server 2022<br>Active Directory"] --> Win10
+    Win10 --> Sysmon["Sysmon<br>Endpoint Telemetry"]
+    Win10 --> Agent["Wazuh Agent"]
+    Sysmon --> Agent
+    Agent --> Wazuh["Ubuntu Server<br>Wazuh Manager on Docker"]
+    Wazuh --> Dashboard["Wazuh Dashboard<br>Alerts and Investigation"]
+```
 
-This lab simulates a full cyber attack chain following real-world attacker behavior:
+## Expected Outcome
 
-### 1. Reconnaissance
-- Port scanning to identify exposed services
+The final result of this project is a documented SOC-style workflow showing how I moved from writing detection rules to validating real alerts and producing incident reports for each simulated attack scenario.
 
-### 2. Initial Access
-- Brute force / password spraying attacks
+This repository is intended to show practical skills in:
 
-### 3. Execution
-- Suspicious PowerShell commands execution
+- Building a defensive security lab
+- Collecting endpoint telemetry
+- Writing and organizing detection rules
+- Simulating attacks in a controlled environment
+- Validating alerts in Wazuh
+- Mapping detections to MITRE ATT&CK
+- Performing incident triage and response
+- Writing professional incident reports
 
-### 4. Persistence
-- Registry modifications for long-term access
+## Repository Structure
 
-### 5. Privilege Escalation
-- Gaining elevated system privileges after compromise
+```text
+docs/
+lab-environment/
+wazuh-siem/
+endpoint-security/
+logs-collection/
+detection-engineering/
+attack-simulation/
+incident-response/
+reports/
+screenshots/
+```
 
----
+## Project Status
 
-## 🧪 Detection Engineering
+Status: In Progress
 
-This project includes custom detection rules such as:
+| Phase | Status |
+|---|---|
+| Project structure | Completed |
+| Lab environment setup | In Progress |
+| Wazuh SIEM deployment | Planned |
+| Endpoint telemetry setup | Planned |
+| Detection engineering | In Progress |
+| Attack simulation | Planned |
+| Alert validation | Planned |
+| Incident response | Planned |
+| Incident reporting | Planned |
 
-- Brute force login detection
-- Suspicious registry modification alerts
-- Multiple failed authentication correlation
-- Sysmon-based behavioral detection
-
----
-
-## 📊 Dashboards
-
-Wazuh dashboards are used to visualize:
-
-- Authentication failures
-- Active alerts
-- Endpoint activity
-- Attack patterns over time
-
----
-
-## 🚨 Incident Response Workflow
-
-1. Alert triggered by SIEM
-2. Triage and severity classification
-3. Log investigation (Wazuh + Sysmon)
-4. Root cause analysis
-5. Incident report generation
-
----
