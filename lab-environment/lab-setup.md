@@ -55,9 +55,7 @@ Kali Linux
 | Evidence | Screenshot |
 |---|---|
 | VM list showing all lab machines | ![VM list](../screenshots/01-lab-vms-overview.png) |
-| Host-only network settings | ![Host-only network](../screenshots/02-host-only-network-settings.png) |
-| Ping test between machines | ![Ping test](../screenshots/03-ping-test-between-machines.png) |
-| Wazuh dashboard access | ![Wazuh dashboard](../screenshots/04-wazuh-dashboard-access.png) |
-| Windows agent active in Wazuh | ![Windows agent active](../screenshots/05-windows-agent-active.png) |
+| Wazuh dashboard access | ![Wazuh dashboard](../screenshots/02-wazuh-dashboard-access.png) |
+| Windows agent active in Wazuh | ![Windows agent active](../screenshots/03-windows-agent-active.png) |
 
 
