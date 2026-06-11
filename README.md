@@ -106,9 +106,9 @@ Status: In Progress
 | Phase | Status |
 |---|---|
 | Project structure | Completed |
-| Lab environment setup | In Progress |
-| Wazuh SIEM deployment | Planned |
-| Endpoint telemetry setup | Planned |
+| Lab environment setup | Completed |
+| Wazuh SIEM deployment | Completed |
+| Endpoint telemetry setup | Completed |
 | Detection engineering | In Progress |
 | Attack simulation | Planned |
 | Alert validation | Planned |
