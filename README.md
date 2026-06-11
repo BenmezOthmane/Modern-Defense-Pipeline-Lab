@@ -117,3 +117,10 @@ Status: In Progress
 | Incident response | Planned |
 | Incident reporting | Planned |
 
+
+## Author
+
+**Othmane BenMezian**  
+Cybersecurity / SOC Analyst Portfolio Project
+
+This project was created as a hands-on lab to demonstrate practical skills in detection engineering, SIEM monitoring, attack simulation, incident response, and security reporting.
