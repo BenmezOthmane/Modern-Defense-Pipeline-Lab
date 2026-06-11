@@ -58,6 +58,8 @@ The project will include detection and validation for the following scenarios:
 
 ## Architecture
 
+![Architecture Diagram](screenshots/architecture-diagram.png)
+
 ```mermaid
 flowchart LR
     Kali["Kali Linux<br>Attacker"] --> Win10["Windows 10 Pro<br>Target Endpoint"]
