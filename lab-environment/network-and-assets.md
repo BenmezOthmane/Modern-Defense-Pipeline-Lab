@@ -39,16 +39,18 @@ The lab uses one isolated host-only network for all machines.
 | Wazuh Agent | Windows 10 Pro - 10.0.0.30 | Endpoint log collection |
 | Sysmon | Windows 10 Pro - 10.0.0.30 | Endpoint telemetry collection |
 
-## Validation Checklist
+## Validated Checks
 
-Use this checklist to prove the lab network is working:
-
-- Windows 10 can ping Windows Server `10.0.0.10`
-- Windows 10 can ping Ubuntu Server `10.0.0.20`
-- Ubuntu Server can communicate with Windows 10 `10.0.0.30`
+- Windows 10 can reach the Ubuntu Wazuh server `10.0.0.20`
 - Kali Linux can reach the Windows 10 target `10.0.0.30`
-- Windows 10 uses `10.0.0.10` as DNS server
-- Wazuh Agent on Windows 10 is connected to Wazuh Manager `10.0.0.20`
+- Windows 10 uses the Windows Server DNS `10.0.0.10`
+- Wazuh Agent on Windows 10 is active and connected to Wazuh Manager
 
+## Evidence
 
-
+| Evidence | Screenshot |
+|---|---|
+| Wazuh agent active on Windows 10 endpoint | ![Wazuh agent active](../screenshots/03-windows-agent-active.png) |
+| Kali Linux can reach Windows 10 target | ![Kali to Windows ping](../screenshots/pingfromkalitowinclient.png) |
+| Windows 10 can reach Ubuntu Wazuh server | ![Windows to Wazuh ping](../screenshots/pingfromwin10toubuser.png) |
+| Windows 10 uses Windows Server DNS | ![Windows DNS configuration](../screenshots/checkdnsconn.png) |
