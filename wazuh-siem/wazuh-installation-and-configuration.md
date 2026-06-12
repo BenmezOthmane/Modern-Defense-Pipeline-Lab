@@ -31,8 +31,8 @@ Document the Wazuh SIEM deployment used in this lab.
 
 | Evidence | Screenshot |
 |---|---|
-| Wazuh dashboard is accessible | ![Wazuh dashboard](../screenshots/08-wazuh-dashboard-home.png) |
-| Wazuh Docker containers are running | ![Wazuh Docker containers](../screenshots/09-wazuh-docker-containers.png) |
+| Wazuh dashboard is accessible | ![Wazuh dashboard](../screenshots/wazuh-dashboard-home.png) |
+| Wazuh Docker containers are running | ![Wazuh Docker containers](../screenshots/wazuh-docker-containers.png) |
 
 ## Status
 
