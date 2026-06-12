@@ -33,7 +33,7 @@ At this stage, the goal is to confirm that the Windows endpoint is sending norma
 
 | Evidence | Screenshot |
 |---|---|
-| Windows endpoint agent is active in Wazuh | ![Windows agent active](../screenshots/windows-agent-active.png) |
+| Windows endpoint agent is active in Wazuh | ![Windows agent active](../screenshots/03-windows-agent-active.png) |
 | Windows Security events are received in Wazuh | ![Windows events in Wazuh](../screenshots/windows-events-in-wazuh.png) |
 
 ## Status
