@@ -112,15 +112,25 @@ Status: In Progress
 | Wazuh SIEM deployment | Completed |
 | Endpoint telemetry setup | Completed |
 | Detection engineering | In Progress |
-| Attack simulation | Planned |
-| Alert validation | Planned |
-| Incident response | Planned |
-| Incident reporting | Planned |
+| Attack simulation | In Progress |
+| Alert validation | In Progress |
+| Incident response | In Progress |
+| Incident reporting | In Progress |
+
+## Validated Scenarios
+
+| Scenario | Status | Detection Rule | MITRE ATT&CK |
+|---|---|---|---|
+| Port Scan Detection | Completed | 100101 | T1046 |
+| Brute Force Detection | Planned | Pending validation | T1110 |
+| Suspicious PowerShell Detection | Planned | Pending validation | T1059.001 |
+| Registry Persistence Detection | Planned | Pending validation | T1547.001 |
+| Privilege Escalation Detection | Planned | Pending validation | T1078.002 |
 
 
 ## Author
 
-**Othmane BenMezian**  
+**Othmane Benmezian**  
 Cybersecurity / SOC Analyst Portfolio Project
 
 This project was created as a hands-on lab to demonstrate practical skills in detection engineering, SIEM monitoring, attack simulation, incident response, and security reporting.
