@@ -23,7 +23,7 @@ nmap -sT -p 1-1000 10.0.0.30
 ### Expected Telemetry
 
 | Source | Event |
-|---|---|---|
+|---|---|
 | Sysmon | Event ID 3 - Network Connection |
 | Wazuh | Custom alert rule 100101 |
 
