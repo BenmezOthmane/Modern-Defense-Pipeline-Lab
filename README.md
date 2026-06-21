@@ -41,6 +41,8 @@ The lab uses the following systems:
 - Sysmon
 - Windows Security Logs
 - Active Directory
+- Suricata IDS
+- Suricata eve.json logs
 - Kali Linux attack tools
 - MITRE ATT&CK
 
@@ -62,13 +64,14 @@ The project will include detection and validation for the following scenarios:
 
 ```mermaid
 flowchart LR
-    Kali["Kali Linux<br>Attacker"] --> Win10["Windows 10 Pro<br>Target Endpoint"]
-    WinServer["Windows Server 2022<br>Active Directory"] --> Win10
-    Win10 --> Sysmon["Sysmon<br>Endpoint Telemetry"]
-    Win10 --> Agent["Wazuh Agent"]
-    Sysmon --> Agent
-    Agent --> Wazuh["Ubuntu Server<br>Wazuh Manager on Docker"]
-    Wazuh --> Dashboard["Wazuh Dashboard<br>Alerts and Investigation"]
+    Kali["Kali Linux<br>Attacker"] --> Traffic["Network Traffic"]
+    Traffic --> Suricata["Suricata IDS<br>Network Detection"]
+    Suricata --> Eve["eve.json<br>IDS Alerts"]
+    Eve --> Wazuh["Wazuh SIEM<br>Correlation & Alerting"]
+    Win10["Windows 10<br>Victim Endpoint"] --> Sysmon["Sysmon<br>Endpoint Telemetry"]
+    Sysmon --> Agent["Wazuh Agent"]
+    Agent --> Wazuh
+    Wazuh --> Dashboard["Wazuh Dashboard<br>Investigation"]
 ```
 
 ## Expected Outcome
