@@ -98,6 +98,7 @@ wazuh-siem/
 endpoint-security/
 logs-collection/
 detection-engineering/
+network-security/
 attack-simulation/
 incident-response/
 reports/
