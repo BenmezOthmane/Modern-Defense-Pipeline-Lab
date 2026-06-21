@@ -60,7 +60,7 @@ The project will include detection and validation for the following scenarios:
 
 ## Architecture
 
-![Architecture Diagram](screenshots/architecture-diagram.png)
+![Architecture Diagram](screenshots/Architecture_Diagram.png)
 
 ```mermaid
 flowchart LR
