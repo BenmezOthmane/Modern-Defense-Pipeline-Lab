@@ -52,7 +52,7 @@ The project will include detection and validation for the following scenarios:
 
 | Scenario | Purpose |
 |---|---|
-| Port Scan Detection | Identify reconnaissance activity against exposed services |
+| Port Scan Detection | Detect reconnaissance using both Sysmon endpoint telemetry and Suricata network IDS alerts |
 | Brute Force Detection | Detect repeated authentication failures |
 | Suspicious PowerShell Detection | Detect suspicious command execution and possible payload activity |
 | Registry Persistence Detection | Detect persistence through Windows autorun registry keys |
