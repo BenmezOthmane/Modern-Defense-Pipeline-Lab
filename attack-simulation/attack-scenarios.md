@@ -13,9 +13,12 @@ nmap -sS -T4 10.0.0.30
 The scan was detected through Suricata network telemetry and Wazuh alerting.
 
 ### Evidence
-Nmap scan from Kali
-Suricata eve.json alert
-Wazuh alert showing port scan fields
+![Nmap scan from Kali](screenshots/scenario01-nmap-scan.png)
+![Suricata eve.json alert](screenshots/scenario01-suricata-eve-json-alert.png)
+![Wazuh-Suricata-Alert-Fields1](screenshots/scenario01-wazuh-suricata-alert-fields1.png)
+![Wazuh-Suricata-Alert-Fields2](screenshots/scenario01-wazuh-suricata-alert-fields2.png)
+![Wazuh-Suricata-Alert-Fields31](screenshots/scenario01-wazuh-suricata-alert-fields3.png)
+![Wazuh-dashboard-overview](screenshots/scenario01-wazuh-dashboard-overview.png)
 
 ### Status
 Completed
@@ -36,9 +39,11 @@ hydra -l testuser -P /home/kali/Desktop/passw.txt -v ssh://10.0.0.30
 The brute force attempt generated multiple Windows failed logon events and Wazuh alerts.
 
 ### Evidence
-Hydra execution from Kali
-Windows Security Event ID 4625
-Wazuh alert showing failed login activity
+![Hydra execution from Kali](screenshots/scenario02-hydra-ssh-bruteforce.png)
+![Windows Security Event ID 4625](screenshots/scenario02-wazuh-4625-alerts-overview.png)
+![Wazuh alert showing failed login activity 1](screenshots/scenario02-wazuh-4625-alert-fields2.png)
+![Wazuh alert showing failed login activity 2](screenshots/scenario02-wazuh-4625-alert-fields3.png)
+
 
 ### Status
 Completed
