@@ -125,8 +125,8 @@ Status: In Progress
 
 | Scenario | Status | Detection Rule | MITRE ATT&CK |
 |---|---|---|---|
-| Port Scan Detection | Completed | 100101 | T1046 |
-| Brute Force Detection | Planned | Pending validation | T1110 |
+| Port Scan Detection | Completed | Nmap, Suricata eve.json, Wazuh alert |
+| Brute Force Detection | Completed | Hydra, Windows Event ID 4625, Wazuh alert |
 | Suspicious PowerShell Detection | Planned | Pending validation | T1059.001 |
 | Registry Persistence Detection | Planned | Pending validation | T1547.001 |
 | Privilege Escalation Detection | Planned | Pending validation | T1078.002 |
