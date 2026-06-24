@@ -29,7 +29,7 @@ Simulate repeated failed SSH login attempts against the Windows 10 endpoint.
 ### Attack Command
 
 ```bash
-hydra -l testuser -P /home/kali/Desktop/passw.txt -u ssh://10.0.0.30
+hydra -l testuser -P /home/kali/Desktop/passw.txt -v ssh://10.0.0.30
 ```
 
 ### Result
