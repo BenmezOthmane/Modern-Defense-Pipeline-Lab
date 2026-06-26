@@ -13,12 +13,12 @@ nmap -sS -T4 10.0.0.30
 The scan was detected through Suricata network telemetry and Wazuh alerting.
 
 ### Evidence
-![Nmap_scan_from_ Kali](screenshots/scenario01-nmap-scan.png)
+![Nmap_scan_from_Kali](screenshots/scenario01-nmap-scan.png)
 ![Suricata_eve.json_alert](screenshots/scenario01-suricata-eve-json-alert.png)
-![Wazuh-Suricata-Alert-Fields1](screenshots/scenario01-wazuh-suricata-alert-fields1.png)
-![Wazuh-Suricata-Alert-Fields2](screenshots/scenario01-wazuh-suricata-alert-fields2.png)
-![Wazuh-Suricata-Alert-Fields31](screenshots/scenario01-wazuh-suricata-alert-fields3.png)
-![Wazuh-dashboard-overview](screenshots/scenario01-wazuh-dashboard-overview.png)
+![Wazuh_Suricata_Alert_Fields1](screenshots/scenario01-wazuh-suricata-alert-fields1.png)
+![Wazuh_Suricata_Alert_Fields2](screenshots/scenario01-wazuh-suricata-alert-fields2.png)
+![Wazuh_Suricata_Alert_Fields31](screenshots/scenario01-wazuh-suricata-alert-fields3.png)
+![Wazuh_dashboard_overview](screenshots/scenario01-wazuh-dashboard-overview.png)
 
 ### Status
 Completed
