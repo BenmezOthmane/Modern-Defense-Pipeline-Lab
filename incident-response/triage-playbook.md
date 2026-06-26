@@ -1,45 +1,38 @@
-# Incident Lifecycle
+# Triage Playbook
 
 ## Purpose
-This document describes how incidents are handled inside the Modern Defense Pipeline Lab.
+This playbook defines the initial triage steps used when Wazuh generates an alert during the lab scenarios.
 
-## Lifecycle Stages
+## Triage Workflow
 
-### 1. Detection
-Security activity is detected through endpoint or network telemetry.
+1. Identify the alert name, rule ID, severity, and timestamp.
+2. Confirm the affected host and source IP.
+3. Review raw event fields in Wazuh.
+4. Map the alert to MITRE ATT&CK.
+5. Check whether the activity matches the simulated scenario.
+6. Determine scope by searching for related events around the same timestamp.
+7. Document evidence and analyst conclusion.
 
-Examples:
-- Sysmon Event ID 3
-- Suricata `eve.json`
-- Windows Security Event ID 4625
+## Scenario 01 - Port Scan
 
-### 2. Alert Generation
-Wazuh receives the telemetry and generates alerts based on built-in or custom detection rules.
+### Key Checks
+- Confirm source IP: `10.0.0.99`
+- Confirm destination IP: `10.0.0.30`
+- Review Suricata alert fields
+- Review Wazuh alert details
+- Confirm MITRE mapping: `T1046`
 
-### 3. Triage
-The alert is reviewed to identify:
-- Rule ID
-- Severity
-- Source IP
-- Destination host
-- Event timestamp
-- MITRE ATT&CK mapping
+### Analyst Decision
+Classify as reconnaissance activity.
 
-### 4. Investigation
-Related events are reviewed to understand scope and intent.
+## Scenario 02 - SSH Brute Force
 
-### 5. Response
-The analyst determines whether the activity requires containment, monitoring, or documentation only.
+### Key Checks
+- Confirm repeated failed logons
+- Confirm Windows Event ID: `4625`
+- Review source activity from Hydra
+- Check affected account and target host
+- Confirm MITRE mapping: `T1110`
 
-### 6. Reporting
-Findings are documented in scenario reports with evidence and analyst conclusions.
-
-## Current Validated Incidents
-
-| Scenario | Detection Source | Status |
-|---|---|---|
-| Port Scan | Suricata / Wazuh | Completed |
-| SSH Brute Force | Windows Security Logs / Wazuh | Completed |
-| Suspicious PowerShell | PowerShell Logs / Wazuh | Planned |
-| Registry Persistence | Sysmon / Wazuh | Planned |
-| Privilege Escalation | Windows Security Logs / Wazuh | Planned |
+### Analyst Decision
+Classify as brute force authentication activity.
