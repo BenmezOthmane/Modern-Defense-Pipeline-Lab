@@ -14,10 +14,7 @@
 Port scanning activity was detected using Suricata IDS and ingested into Wazuh for alerting and investigation.
 
 ### Validated Evidence
-- Source IP: 10.0.0.99
-- Destination IP: 10.0.0.30
-- Alert: PORT SCAN DETECTED
-- Wazuh source: Suricata / eve.json
+![Architecture Diagram](screenshots/Source&DestIP.png)
 
 
 ## Scenario 02 - Brute Force Detection
