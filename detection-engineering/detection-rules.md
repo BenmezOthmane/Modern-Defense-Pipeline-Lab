@@ -31,10 +31,9 @@ Port scanning activity was detected using Suricata IDS and ingested into Wazuh f
 Repeated failed authentication attempts were detected from the Kali attacker machine against the Windows 10 endpoint.
 
 ### Validated Evidence
-- Source activity: Hydra SSH brute force
-- Target IP: 10.0.0.30
-- Windows Event ID: 4625
-- Wazuh alert: Logon Failure - Unknown user or bad password
+![Hydra SSH brute force](screenshots/BruteForceEv.png)
+![Hydra SSH brute force](screenshots/scenario02-wazuh-4625-alert-fields1.png)
+![Hydra SSH brute force](screenshots/scenario02-wazuh-4625-alert-fields3.png)
 
 
 ## Remaining Scenarios
