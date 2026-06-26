@@ -31,9 +31,9 @@ Port scanning activity was detected using Suricata IDS and ingested into Wazuh f
 Repeated failed authentication attempts were detected from the Kali attacker machine against the Windows 10 endpoint.
 
 ### Validated Evidence
-![Hydra SSH brute force](screenshots/BruteForceEv.png)
-![Hydra SSH brute force](screenshots/scenario02-wazuh-4625-alert-fields1.png)
-![Hydra SSH brute force](screenshots/scenario02-wazuh-4625-alert-fields3.png)
+![agent_IP](screenshots/BruteForceEv.png)
+![event_ID](screenshots/scenario02-wazuh-4625-alert-fields1.png)
+![Logon_Failure](screenshots/scenario02-wazuh-4625-alert-fields3.png)
 
 
 ## Remaining Scenarios
