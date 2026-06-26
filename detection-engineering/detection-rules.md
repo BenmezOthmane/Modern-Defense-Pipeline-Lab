@@ -14,7 +14,7 @@
 Port scanning activity was detected using Suricata IDS and ingested into Wazuh for alerting and investigation.
 
 ### Validated Evidence
-![Architecture Diagram](screenshots/Source&DestIP.png)
+![source_IP&destination_IP](screenshots/Source&DestIP.png)
 
 
 ## Scenario 02 - Brute Force Detection
