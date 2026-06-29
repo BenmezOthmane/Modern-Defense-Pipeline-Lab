@@ -115,11 +115,11 @@ Status: In Progress
 | Lab environment setup | Completed |
 | Wazuh SIEM deployment | Completed |
 | Endpoint telemetry setup | Completed |
-| Detection engineering | In Progress |
-| Attack simulation | In Progress |
-| Alert validation | In Progress |
-| Incident response | In Progress |
-| Incident reporting | In Progress |
+| Detection engineering | Completed |
+| Attack simulation | Completed |
+| Alert validation | Completed |
+| Incident response | Completed |
+| Incident reporting | Completed |
 
 ## Validated Scenarios
 
