@@ -30,7 +30,7 @@ The lab uses the following systems:
 | Windows 10 Pro | Target endpoint monitored by Wazuh Agent |
 | Windows Server Datacenter 2022 | Active Directory domain controller |
 | Kali Linux | Attacker machine used for controlled simulations |
-| Ubuntu Server | SIEM server running Wazuh Manager with Docker |
+| Ubuntu Server | SIEM server running Wazuh Manager with Docker, Suricata IDS |
 
 ## Tools And Technologies
 
