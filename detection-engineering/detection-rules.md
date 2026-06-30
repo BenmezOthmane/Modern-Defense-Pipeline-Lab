@@ -73,6 +73,7 @@ A suspicious PowerShell process executed using **ExecutionPolicy Bypass** was de
 
 ---
 
+
 # Scenario 04 - Registry Persistence Detection
 
 | Item | Value |
@@ -95,3 +96,20 @@ A Registry Run Key modification was detected after creating an autorun persisten
 
 ---
 
+# Scenario 05 - Privilege Escalation Detection
+
+| Item | Value |
+|---|---|
+| Attack Tool | net localgroup |
+| Windows Event ID | 4732 |
+| Detection Rule | Wazuh Built-in Rule 60154 |
+| SIEM | Wazuh |
+| MITRE ATT&CK | T1078.002 – Valid Accounts: Domain Accounts |
+
+### Detection Summary
+
+Adding **testuser** to the local **Administrators** group generated Windows Security Event ID 4732, which was successfully detected by Wazuh.
+
+### Validated Evidence
+
+![Privilege Escalation](screenshots/scenario05-privilege-escalation.png)
