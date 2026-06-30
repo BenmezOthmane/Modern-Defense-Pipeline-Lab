@@ -44,6 +44,28 @@ The brute force attempt generated multiple Windows failed logon events and Wazuh
 ![Wazuh_alert_showing_failed_login_activity_1](screenshots/scenario02-wazuh-4625-alert-fields2.png)
 ![Wazuh_alert_showing_failed_login_activity_2](screenshots/scenario02-wazuh-4625-alert-fields3.png)
 
-
 ### Status
 Completed
+
+
+## Scenario 03 - Suspicious PowerShell Execution
+
+### Objective
+
+Simulate suspicious PowerShell execution commonly used during the execution phase of an attack.
+
+### Attack Command
+
+```powershell
+powershell.exe -ExecutionPolicy Bypass -NoProfile
+```
+
+### Result
+
+The PowerShell process was detected by a custom Wazuh rule (Rule ID: 100201) based on Windows Security Event ID 4688.
+
+### Evidence
+
+![PowerShell Alert](screenshots/scenario03-powershell.png)
+
+---
