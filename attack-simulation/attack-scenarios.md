@@ -68,7 +68,7 @@ The PowerShell process was detected by a custom Wazuh rule (Rule ID: 100201) bas
 
 ### Evidence
 
-![PowerShell Alert](screenshots/Scenario3Powershellrun.png)
+![PowerShell Alert](screenshots/01-PowerShell-Alert.png)
 
 ---
 
@@ -94,6 +94,26 @@ Sysmon Event ID 13 was generated and Wazuh detected the Registry Run Key modific
 
 ### Evidence
 
-![Registry Persistence](screenshots/scenario04-registry.png)
+![Registry Persistence](02-Registry-Alert.png)
 
 ---
+
+## Scenario 05 - Privilege Escalation
+
+### Objective
+
+Simulate privilege escalation by adding a standard user to the local Administrators group.
+
+### Attack Command
+
+```cmd
+net localgroup Administrators testuser /add
+```
+
+### Result
+
+Windows Security Event ID 4732 was generated and Wazuh detected the modification of the local Administrators group.
+
+### Evidence
+
+![Privilege Escalation](screenshots/03-PrivilegeEscalation-Alert.png)
