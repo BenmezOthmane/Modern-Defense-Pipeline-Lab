@@ -73,3 +73,25 @@ A suspicious PowerShell process executed using **ExecutionPolicy Bypass** was de
 
 ---
 
+# Scenario 04 - Registry Persistence Detection
+
+| Item | Value |
+|---|---|
+| Attack Tool | reg.exe |
+| Log Source | Sysmon |
+| Sysmon Event ID | 13 |
+| Detection Rule | Wazuh Rule 92302 |
+| SIEM | Wazuh |
+| MITRE ATT&CK | T1547.001 – Registry Run Keys / Startup Folder |
+
+### Detection Summary
+
+A Registry Run Key modification was detected after creating an autorun persistence entry using **reg.exe**.
+
+### Validated Evidence
+
+![Registry Persistence](screenshots/scenario04-registry.png)
+
+
+---
+
