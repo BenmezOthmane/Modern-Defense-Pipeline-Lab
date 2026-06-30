@@ -25,6 +25,7 @@ Port scanning activity was detected using Suricata IDS and forwarded to Wazuh fo
 
 ---
 
+
 # Scenario 02 - SSH Brute Force Detection
 
 | Item | Value |
@@ -50,4 +51,25 @@ Multiple failed authentication attempts were detected from the Kali Linux attack
 
 ---
 
+
+# Scenario 03 - Suspicious PowerShell Detection
+
+| Item | Value |
+|---|---|
+| Attack Tool | PowerShell |
+| Windows Event ID | 4688 |
+| Detection Rule | Custom Rule (100201) |
+| SIEM | Wazuh |
+| MITRE ATT&CK | T1059.001 – PowerShell |
+
+### Detection Summary
+
+A suspicious PowerShell process executed using **ExecutionPolicy Bypass** was detected through a custom Wazuh rule based on Windows Security Event ID 4688.
+
+### Validated Evidence
+
+![PowerShell Detection](screenshots/scenario03-powershell.png)
+
+
+---
 
