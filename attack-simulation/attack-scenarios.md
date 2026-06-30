@@ -23,6 +23,7 @@ The scan was detected through Suricata network telemetry and Wazuh alerting.
 ### Status
 Completed
 
+---
 
 ## Scenario 02 - SSH Brute Force
 
@@ -47,6 +48,7 @@ The brute force attempt generated multiple Windows failed logon events and Wazuh
 ### Status
 Completed
 
+---
 
 ## Scenario 03 - Suspicious PowerShell Execution
 
@@ -66,6 +68,32 @@ The PowerShell process was detected by a custom Wazuh rule (Rule ID: 100201) bas
 
 ### Evidence
 
-![PowerShell Alert](screenshots/scenario03-powershell.png)
+![PowerShell Alert](screenshots/Scenario3Powershellrun.png)
+
+---
+
+## Scenario 04 - Registry Run Key Persistence
+
+### Objective
+
+Simulate persistence by creating a Registry Run Key.
+
+### Attack Command
+
+```cmd
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Run" ^
+/v Updater ^
+/t REG_SZ ^
+/d "C:\Windows\System32\calc.exe" ^
+/f
+```
+
+### Result
+
+Sysmon Event ID 13 was generated and Wazuh detected the Registry Run Key modification as a persistence technique.
+
+### Evidence
+
+![Registry Persistence](screenshots/scenario04-registry.png)
 
 ---
