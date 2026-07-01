@@ -50,3 +50,28 @@ Examples:
 ### 6. Recovery
 
 The endpoint is verified to ensure no persistence, suspicious processes, or unauthorized privileges remain.
+
+### 7. Reporting
+
+Findings are documented in scenario reports and final incident response reports.
+
+## Current Validated Incidents
+
+| Scenario | Detection Source | Status |
+|---|---|---|
+| Port Scan | Suricata / Wazuh | Completed |
+| SSH Brute Force | Windows Security Logs / Wazuh | Completed |
+| Suspicious PowerShell | Windows Event ID 4688 / Wazuh | Completed |
+| Registry Persistence | Sysmon Event ID 13 / Wazuh | Completed |
+| Privilege Escalation | Windows Event ID 4732 / Wazuh | Completed |
+
+## Multi-Stage Incident
+
+The final post-exploitation incident combined three stages:
+
+```text
+-> Suspicious PowerShell Execution
+-> Registry Run Key Persistence
+-> Privilege Escalation
+```
+
