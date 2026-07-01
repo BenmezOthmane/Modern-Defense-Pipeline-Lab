@@ -112,6 +112,8 @@ Status: ~ Completed
 | Incident response documentation | Completed |
 | Final reporting | In Progress |
 
+---
+
 ## Author
 
 **Othmane Benmezian**  
