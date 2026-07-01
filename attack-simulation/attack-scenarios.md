@@ -61,7 +61,8 @@ Simulate suspicious post-compromise command execution using PowerShell.
 ```powershell
 powershell.exe -ExecutionPolicy Bypass -NoProfile
 ```
-
+![Suspicious_PowerShell_execution](screenshots/BypassPowershell.png)
+ 
 ### Expected Result
 
 Wazuh detects suspicious PowerShell execution through process creation telemetry.
@@ -69,15 +70,6 @@ Wazuh detects suspicious PowerShell execution through process creation telemetry
 ### Status
 
 Completed.
-
-### Evidence
-![Wazuh_Suricata_Alert_Fields1](screenshots/scenario01-wazuh-suricata-alert-fields1.png)
-![Wazuh_Suricata_Alert_Fields2](screenshots/scenario01-wazuh-suricata-alert-fields2.png)
-![Wazuh_Suricata_Alert_Fields31](screenshots/scenario01-wazuh-suricata-alert-fields3.png)
-![Wazuh_dashboard_overview](screenshots/scenario01-wazuh-dashboard-overview.png)
-
-### Status
-Completed
 
 ---
 
