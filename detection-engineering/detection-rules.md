@@ -64,3 +64,22 @@ Suspicious PowerShell execution was detected after a command was launched with e
 ---
 
 
+## Scenario 04 - Registry Persistence
+
+| Item | Value |
+|---|---|
+| Event Source | Sysmon |
+| Event ID | 13 - Registry Value Set |
+| Registry Path | `HKCU\Software\Microsoft\Windows\CurrentVersion\Run\Updater` |
+| Value Data | `C:\Windows\System32\calc.exe` |
+| Wazuh Rule ID | 92302 |
+| MITRE ATT&CK | T1547.001 - Registry Run Keys / Startup Folder |
+
+### Detection Summary
+
+Registry Run Key persistence was detected after a new autorun value was created under the current user's Run key.
+
+
+---
+
+
