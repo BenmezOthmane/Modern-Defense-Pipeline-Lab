@@ -35,3 +35,18 @@ The analyst reviews the alert to identify:
 ### 4. Investigation
 
 Related events are reviewed to determine whether the activity is isolated or part of a larger attack chain.
+
+### 5. Response
+
+The analyst performs containment and remediation when needed.
+
+Examples:
+
+- Remove Registry Run Key persistence.
+- Revoke unauthorized administrator group membership.
+- Verify no suspicious PowerShell processes remain active.
+- Run Microsoft Defender checks.
+
+### 6. Recovery
+
+The endpoint is verified to ensure no persistence, suspicious processes, or unauthorized privileges remain.
