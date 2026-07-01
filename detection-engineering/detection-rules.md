@@ -46,81 +46,21 @@ Repeated failed authentication attempts were detected from the Kali attacker mac
 ---
 
 
+## Scenario 03 - Suspicious PowerShell Execution
 
+| Item | Value |
+|---|---|
+| Event Source | Windows Security Logs |
+| Event ID | 4688 - Process Creation |
+| Command Line | `powershell.exe -ExecutionPolicy Bypass -NoProfile` |
+| Wazuh Rule ID | 100201 |
+| MITRE ATT&CK | T1059.001 - PowerShell |
 
+### Detection Summary
 
-
-
-### Validated Evidence
-
-![Brute Force](screenshots/BruteForceEv.png)
-
-![Event ID](screenshots/scenario02-wazuh-4625-alert-fields1.png)
-
-![Logon Failure](screenshots/scenario02-wazuh-4625-alert-fields3.png)
+Suspicious PowerShell execution was detected after a command was launched with execution policy bypass and no profile loading.
 
 
 ---
 
 
-# Scenario 03 - Suspicious PowerShell Detection
-
-| Item | Value |
-|---|---|
-| Attack Tool | PowerShell |
-| Windows Event ID | 4688 |
-| Detection Rule | Custom Rule (100201) |
-| SIEM | Wazuh |
-| MITRE ATT&CK | T1059.001 – PowerShell |
-
-### Detection Summary
-
-A suspicious PowerShell process executed using **ExecutionPolicy Bypass** was detected through a custom Wazuh rule based on Windows Security Event ID 4688.
-
-### Validated Evidence
-
-![PowerShell Detection](screenshots/scenario03-powershell.png)
-
-
----
-
-
-# Scenario 04 - Registry Persistence Detection
-
-| Item | Value |
-|---|---|
-| Attack Tool | reg.exe |
-| Log Source | Sysmon |
-| Sysmon Event ID | 13 |
-| Detection Rule | Wazuh Rule 92302 |
-| SIEM | Wazuh |
-| MITRE ATT&CK | T1547.001 – Registry Run Keys / Startup Folder |
-
-### Detection Summary
-
-A Registry Run Key modification was detected after creating an autorun persistence entry using **reg.exe**.
-
-### Validated Evidence
-
-![Registry Persistence](screenshots/scenario04-registry.png)
-
-
----
-
-# Scenario 05 - Privilege Escalation Detection
-
-| Item | Value |
-|---|---|
-| Attack Tool | net localgroup |
-| Windows Event ID | 4732 |
-| Detection Rule | Wazuh Built-in Rule 60154 |
-| SIEM | Wazuh |
-| MITRE ATT&CK | T1078.002 – Valid Accounts: Domain Accounts |
-
-### Detection Summary
-
-Adding **testuser** to the local **Administrators** group generated Windows Security Event ID 4732, which was successfully detected by Wazuh.
-
-### Validated Evidence
-
-![Privilege Escalation](screenshots/scenario05-privilege-escalation.png)
