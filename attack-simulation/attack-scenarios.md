@@ -67,6 +67,8 @@ powershell.exe -ExecutionPolicy Bypass -NoProfile
 
 Wazuh detects suspicious PowerShell execution through process creation telemetry.
 
+![PowerShell-Alert](screenshots/01-PowerShell-Alert.png)
+
 ### Status
 
 Completed.
@@ -89,6 +91,8 @@ reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Run /v Updater /t REG_SZ 
 
 Sysmon Event ID `13` is generated and Wazuh alerts on Registry Run Key persistence.
 
+![Registry-Alert](screenshots/02-Registry-Alert.png)
+
 ### Status
 
 Completed.
@@ -110,6 +114,8 @@ net localgroup Administrators testuser /add
 ### Expected Result
 
 Windows Event ID `4732` is generated and Wazuh alerts on administrator group membership modification.
+
+![PrivilegeEscalation-Alert](screenshots/03-PrivilegeEscalation-Alert.png)
 
 ### Status
 
