@@ -73,3 +73,25 @@ Completed.
 
 ---
 
+## Scenario 04 - Registry Persistence
+
+### Objective
+
+Simulate persistence using a Registry Run Key.
+
+### Simulated Command
+
+```powershell
+reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Run /v Updater /t REG_SZ /d C:\Windows\System32\calc.exe /f
+```
+
+### Expected Result
+
+Sysmon Event ID `13` is generated and Wazuh alerts on Registry Run Key persistence.
+
+### Status
+
+Completed.
+
+---
+
