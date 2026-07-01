@@ -64,4 +64,20 @@ Classify as suspicious command execution and investigate for follow-on activity.
 
 ---
 
+## Scenario 04 - Registry Persistence
+
+### Key Checks
+
+- Confirm Sysmon Event ID: `13`.
+- Review modified Registry path.
+- Confirm whether the key is under `CurrentVersion\Run`.
+- Identify responsible process, such as `reg.exe`.
+- Review value data configured for autorun.
+
+### Analyst Decision
+
+Classify as persistence if the Registry Run Key was created without authorization.
+
+---
+
 
