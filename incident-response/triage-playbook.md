@@ -80,4 +80,16 @@ Classify as persistence if the Registry Run Key was created without authorizatio
 
 ---
 
+## Scenario 05 - Privilege Escalation
 
+### Key Checks
+
+- Confirm Windows Event ID: `4732`.
+- Identify the user added to the privileged group.
+- Confirm target group: `Administrators`.
+- Review whether the change was authorized.
+- Correlate with prior execution or persistence events.
+
+### Analyst Decision
+
+Classify as privilege escalation if the group membership change was unauthorized.
