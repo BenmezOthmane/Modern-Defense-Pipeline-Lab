@@ -14,17 +14,15 @@
 
 Port scanning activity was detected through Suricata IDS and ingested into Wazuh for alerting and investigation.
 
-### Evidence To Include
-
-- Nmap scan output
-- Suricata alert: `PORT SCAN DETECTED`
-- Wazuh fields showing source IP, destination IP, destination port, and timestamp
+![Nmap_scan_output](screenshots/scenario01-nmap-scan.png)
+![Suricata_eve.json_alert](screenshots/scenario01-suricata-eve-json-alert.png)
+![Wazuh_fields](screenshots/scenario01-wazuh-suricata-alert-fields1.png)
 
 
 ---
 
 
-# Scenario 02 - SSH Brute Force Detection
+## Scenario 02 - SSH Brute Force Detection
 
 | Item | Value |
 |---|---|
@@ -32,11 +30,26 @@ Port scanning activity was detected through Suricata IDS and ingested into Wazuh
 | Target Service | SSH |
 | Windows Event ID | 4625 |
 | SIEM | Wazuh |
-| MITRE ATT&CK | T1110 – Brute Force |
+| MITRE ATT&CK | T1110 - Brute Force |
 
 ### Detection Summary
 
-Multiple failed authentication attempts were detected from the Kali Linux attacker against the Windows 10 endpoint.
+Repeated failed authentication attempts were detected from the Kali attacker machine against the Windows endpoint.
+
+### Evidence To Include
+
+![Hydra_output](screenshots/scenario02-hydra-ssh-bruteforce.png)
+![Wazuh-4625-alert](screenshots/scenario02-wazuh-4625-alert-fields1.png)
+![Wazuh-4625-alert](screenshots/scenario02-wazuh-4625-alert-fields2.png)
+
+
+---
+
+
+
+
+
+
 
 ### Validated Evidence
 
