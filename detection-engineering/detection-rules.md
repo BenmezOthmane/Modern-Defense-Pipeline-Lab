@@ -103,7 +103,7 @@ Privilege escalation was detected when `SOC\testuser` was added to the local Adm
 Scenarios 03, 04, and 05 were investigated as a coordinated post-exploitation chain:
 
 ```text
-Suspicious PowerShell Execution
+-> Suspicious PowerShell Execution
 -> Registry Run Key Persistence
 -> Local Administrator Group Addition
 ```
