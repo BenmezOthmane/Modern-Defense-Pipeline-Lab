@@ -19,3 +19,19 @@ Examples:
 ### 2. Alert Generation
 
 Wazuh receives telemetry and generates alerts based on built-in and custom rules.
+
+### 3. Triage
+
+The analyst reviews the alert to identify:
+
+- Rule ID
+- Severity
+- Source IP
+- Destination host
+- User account
+- Process or registry object
+- MITRE ATT&CK mapping
+
+### 4. Investigation
+
+Related events are reviewed to determine whether the activity is isolated or part of a larger attack chain.
