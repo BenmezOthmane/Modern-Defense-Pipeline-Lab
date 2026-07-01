@@ -48,4 +48,20 @@ Classify as brute force authentication activity.
 
 ---
 
+## Scenario 03 - Suspicious PowerShell
+
+### Key Checks
+
+- Confirm process: `powershell.exe`.
+- Review command-line arguments.
+- Look for `ExecutionPolicy Bypass` and `NoProfile`.
+- Identify executing user.
+- Search for events immediately before and after the PowerShell execution.
+
+### Analyst Decision
+
+Classify as suspicious command execution and investigate for follow-on activity.
+
+---
+
 
