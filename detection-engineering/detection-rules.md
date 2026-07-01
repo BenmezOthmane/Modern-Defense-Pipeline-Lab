@@ -83,3 +83,27 @@ Registry Run Key persistence was detected after a new autorun value was created 
 ---
 
 
+## Scenario 05 - Privilege Escalation
+
+| Item | Value |
+|---|---|
+| Event Source | Windows Security Logs |
+| Event ID | 4732 - Member added to security-enabled local group |
+| User Added | `SOC\testuser` |
+| Target Group | `Builtin\Administrators` |
+| Wazuh Rule ID | 60154 |
+| MITRE ATT&CK | Privilege Escalation |
+
+### Detection Summary
+
+Privilege escalation was detected when `SOC\testuser` was added to the local Administrators group.
+
+## Multi-Stage Attack Chain
+
+Scenarios 03, 04, and 05 were investigated as a coordinated post-exploitation chain:
+
+```text
+Suspicious PowerShell Execution
+-> Registry Run Key Persistence
+-> Local Administrator Group Addition
+```
