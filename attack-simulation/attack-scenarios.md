@@ -42,7 +42,7 @@ hydra -l testuser -P /home/kali/Desktop/passw.txt -v ssh://10.0.0.30
 
 Windows generates Event ID `4625` and Wazuh displays failed logon alerts.
 
-![Windows_Security_Event_ID_4625](screenshots/scenario02-wazuh-4625-alerts-overview.png)
+![Wazuh-4625-alert](screenshots/scenario02-wazuh-4625-alert-fields1.png)
 
 ### Status
 
