@@ -1,26 +1,24 @@
 # Detection Engineering Rules
 
-This document summarizes the detection rules developed and validated throughout the Home SOC Lab.
-
----
-
-# Scenario 01 - Port Scan Detection
+## Scenario 01 - Port Scan Detection
 
 | Item | Value |
 |---|---|
 | Attack Tool | Nmap |
-| Network Sensor | Suricata |
-| Log Source | /var/log/suricata/eve.json |
+| Detection Source | Suricata IDS |
+| Log Source | `/var/log/suricata/eve.json` |
 | SIEM | Wazuh |
-| MITRE ATT&CK | T1046 – Network Service Discovery |
+| MITRE ATT&CK | T1046 - Network Service Discovery |
 
 ### Detection Summary
 
-Port scanning activity was detected using Suricata IDS and forwarded to Wazuh for alert generation and investigation.
+Port scanning activity was detected through Suricata IDS and ingested into Wazuh for alerting and investigation.
 
-### Validated Evidence
+### Evidence To Include
 
-![Source_IP&Destination_IP](screenshots/Source&DestIP.png)
+- Nmap scan output
+- Suricata alert: `PORT SCAN DETECTED`
+- Wazuh fields showing source IP, destination IP, destination port, and timestamp
 
 
 ---
