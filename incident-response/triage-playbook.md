@@ -13,3 +13,23 @@ This playbook defines the triage process used when Wazuh generates an alert duri
 5. Search for related events around the same timestamp.
 6. Decide whether the event is isolated or part of a larger attack chain.
 7. Document evidence, conclusion, and response actions.
+
+---
+
+## Scenario 01 - Port Scan
+
+### Key Checks
+
+- Confirm source IP: `10.0.0.99`
+- Confirm destination IP: `10.0.0.30`
+- Review Suricata `eve.json` alert fields
+- Confirm alert signature: `PORT SCAN DETECTED`
+- Confirm MITRE mapping: `T1046`
+
+### Analyst Decision
+
+Classify as reconnaissance activity.
+
+---
+
+
