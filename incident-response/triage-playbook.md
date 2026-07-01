@@ -32,4 +32,20 @@ Classify as reconnaissance activity.
 
 ---
 
+## Scenario 02 - SSH Brute Force
+
+### Key Checks
+
+- Confirm repeated failed logon attempts.
+- Confirm Windows Event ID: `4625`.
+- Review target account and target host.
+- Confirm Hydra activity from the attacker machine.
+- Confirm MITRE mapping: `T1110`.
+
+### Analyst Decision
+
+Classify as brute force authentication activity.
+
+---
+
 
