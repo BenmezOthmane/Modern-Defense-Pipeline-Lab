@@ -95,3 +95,22 @@ Completed.
 
 ---
 
+## Scenario 05 - Privilege Escalation
+
+### Objective
+
+Simulate privilege escalation by adding a user to the local Administrators group.
+
+### Simulated Command
+
+```powershell
+net localgroup Administrators testuser /add
+```
+
+### Expected Result
+
+Windows Event ID `4732` is generated and Wazuh alerts on administrator group membership modification.
+
+### Status
+
+Completed.
