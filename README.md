@@ -2,22 +2,21 @@
 
 ## Overview
 
-Modern Defense Pipeline Lab is a hands-on cybersecurity project designed to simulate a small enterprise security environment.
+Modern Defense Pipeline Lab is a hands-on cybersecurity project that simulates a small enterprise security environment and documents the workflow of a SOC analyst from detection engineering to incident reporting.
 
 The goal of this lab is to demonstrate the full workflow of a security analyst: from detection engineering and attack simulation to alert validation, investigation, incident response, and final reporting.
 
 ## Project Goal
 
-This project builds a realistic defensive pipeline where security events are collected from monitored endpoints, analyzed inside a SIEM, matched against detection rules, and investigated as security incidents.
-
-The lab focuses on documenting the complete journey:
+The goal of this project is to demonstrate a practical defensive pipeline:
 
 ```text
-Detection Rules
--> Attack Simulation
--> Alert Generation
--> Analyst Triage
--> Incident Response
+Attack Simulation
+-> Telemetry Collection
+-> SIEM Detection
+-> Alert Triage
+-> Investigation
+-> Response
 -> Incident Report
 ```
 
@@ -30,7 +29,7 @@ The lab uses the following systems:
 | Windows 10 Pro | Target endpoint monitored by Wazuh Agent |
 | Windows Server Datacenter 2022 | Active Directory domain controller |
 | Kali Linux | Attacker machine used for controlled simulations |
-| Ubuntu Server | SIEM server running Wazuh Manager with Docker, Suricata IDS |
+| Ubuntu Server | SIEM server running Wazuh Manager with Docker and Suricata IDS environment |
 
 ## Tools And Technologies
 
@@ -40,23 +39,21 @@ The lab uses the following systems:
 - Docker
 - Sysmon
 - Windows Security Logs
-- Active Directory
 - Suricata IDS
-- Suricata eve.json logs
+- Suricata `eve.json`
+- Active Directory
 - Kali Linux attack tools
 - MITRE ATT&CK
 
 ## Detection Scenarios
 
-The project will include detection and validation for the following scenarios:
-
-| Scenario | Purpose |
-|---|---|
-| Port Scan Detection | Detect reconnaissance using both Sysmon endpoint telemetry and Suricata network IDS alerts |
-| Brute Force Detection | Detect repeated authentication failures |
-| Suspicious PowerShell Detection | Detect suspicious command execution and possible payload activity |
-| Registry Persistence Detection | Detect persistence through Windows autorun registry keys |
-| Privilege Escalation Detection | Detect suspicious privilege or admin group changes |
+| Scenario | Purpose | Status |
+|---|---|---|
+| Port Scan Detection | Detect reconnaissance using Suricata and Wazuh | Completed |
+| SSH Brute Force Detection | Detect repeated failed authentication attempts | Completed |
+| Suspicious PowerShell Detection | Detect post-compromise command execution | Completed |
+| Registry Persistence Detection | Detect Registry Run Key persistence | Completed |
+| Privilege Escalation Detection | Detect unauthorized administrator group membership | Completed |
 
 ## Architecture
 
@@ -74,20 +71,15 @@ flowchart LR
     Wazuh --> Dashboard["Wazuh Dashboard<br>Investigation"]
 ```
 
-## Expected Outcome
+## Validated Scenarios
 
-The final result of this project is a documented SOC-style workflow showing how I moved from writing detection rules to validating real alerts and producing incident reports for each simulated attack scenario.
-
-This repository is intended to show practical skills in:
-
-- Building a defensive security lab
-- Collecting endpoint telemetry
-- Writing and organizing detection rules
-- Simulating attacks in a controlled environment
-- Validating alerts in Wazuh
-- Mapping detections to MITRE ATT&CK
-- Performing incident triage and response
-- Writing professional incident reports
+| Scenario | Evidence | MITRE ATT&CK |
+|---|---|---|
+| Port Scan Detection | Nmap, Suricata `eve.json`, Wazuh alert | T1046 |
+| SSH Brute Force Detection | Hydra, Windows Event ID 4625, Wazuh alert | T1110 |
+| Suspicious PowerShell Detection | Windows Event ID 4688, Wazuh custom rule | T1059.001 |
+| Registry Persistence Detection | Sysmon Event ID 13, Registry Run Key alert | T1547.001 |
+| Privilege Escalation Detection | Windows Event ID 4732, administrator group change alert | T1484 - Privilege Escalation |
 
 ## Repository Structure
 
@@ -96,9 +88,8 @@ docs/
 lab-environment/
 wazuh-siem/
 endpoint-security/
-logs-collection/
-detection-engineering/
 network-security/
+detection-engineering/
 attack-simulation/
 incident-response/
 reports/
@@ -107,34 +98,25 @@ screenshots/
 
 ## Project Status
 
-Status: In Progress
+Status: ~ Completed
 
 | Phase | Status |
 |---|---|
-| Project structure | Completed |
 | Lab environment setup | Completed |
 | Wazuh SIEM deployment | Completed |
 | Endpoint telemetry setup | Completed |
+| Suricata IDS integration | Completed |
 | Detection engineering | Completed |
 | Attack simulation | Completed |
 | Alert validation | Completed |
-| Incident response | Completed |
-| Incident reporting | Completed |
-
-## Validated Scenarios
-
-| Scenario | Status | Detection Rule | MITRE ATT&CK |
-|---|---|---|---|
-| Port Scan Detection | Completed | Nmap, Suricata eve.json, Wazuh alert |
-| Brute Force Detection | Completed | Hydra, Windows Event ID 4625, Wazuh alert |
-| Suspicious PowerShell Detection | Planned | Pending validation | T1059.001 |
-| Registry Persistence Detection | Planned | Pending validation | T1547.001 |
-| Privilege Escalation Detection | Planned | Pending validation | T1078.002 |
-
+| Incident response documentation | Completed |
+| Final reporting | In Progress |
 
 ## Author
 
 **Othmane Benmezian**  
-Cybersecurity / SOC Analyst Portfolio Project
+Entry-Level SOC Analyst | Blue Team | Cybersecurity / SOC Analyst Portfolio Project
+
+This project was created as a hands-on lab to demonstrate practical skills in detection engineering, SIEM monitoring, attack simulation, incident triage, response, and reporting.
 
 This project was created as a hands-on lab to demonstrate practical skills in detection engineering, SIEM monitoring, attack simulation, incident response, and security reporting.
