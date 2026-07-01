@@ -2,6 +2,8 @@
 
 ## Scenario 01 - Port Scan Detection
 
+![Nmap_scan_output](screenshots/scenario01-nmap-scan.png)
+
 | Item | Value |
 |---|---|
 | Attack Tool | Nmap |
@@ -14,7 +16,6 @@
 
 Port scanning activity was detected through Suricata IDS and ingested into Wazuh for alerting and investigation.
 
-![Nmap_scan_output](screenshots/scenario01-nmap-scan.png)
 ![Suricata_eve.json_alert](screenshots/scenario01-suricata-eve-json-alert.png)
 ![Wazuh_fields](screenshots/scenario01-wazuh-suricata-alert-fields1.png)
 
@@ -23,6 +24,8 @@ Port scanning activity was detected through Suricata IDS and ingested into Wazuh
 
 
 ## Scenario 02 - SSH Brute Force Detection
+
+![Hydra_output](screenshots/scenario02-hydra-ssh-bruteforce.png)
 
 | Item | Value |
 |---|---|
@@ -36,9 +39,6 @@ Port scanning activity was detected through Suricata IDS and ingested into Wazuh
 
 Repeated failed authentication attempts were detected from the Kali attacker machine against the Windows endpoint.
 
-### Evidence To Include
-
-![Hydra_output](screenshots/scenario02-hydra-ssh-bruteforce.png)
 ![Wazuh-4625-alert](screenshots/scenario02-wazuh-4625-alert-fields1.png)
 ![Wazuh-4625-alert](screenshots/scenario02-wazuh-4625-alert-fields2.png)
 
