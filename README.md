@@ -1,5 +1,9 @@
 # Modern Defense Pipeline Lab
 
+![Wazuh](https://img.shields.io/badge/Wazuh-SIEM-green)
+![MITRE ATT&CK](https://img.shields.io/badge/MITRE-ATT%26CK-purple)
+![License](https://img.shields.io/badge/License-MIT-lightgrey)
+
 ## Overview
 
 Modern Defense Pipeline Lab is a hands-on cybersecurity project that simulates a small enterprise security environment and documents the workflow of a SOC analyst from detection engineering to incident reporting.
