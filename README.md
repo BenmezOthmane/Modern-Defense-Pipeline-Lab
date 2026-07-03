@@ -1,6 +1,7 @@
 # Modern Defense Pipeline Lab
 
 ![Wazuh](https://img.shields.io/badge/Wazuh-SIEM-green)
+![Suricata](https://img.shields.io/badge/Suricata-red)
 ![MITRE ATT&CK](https://img.shields.io/badge/MITRE-ATT%26CK-purple)
 ![License](https://img.shields.io/badge/License-MIT-lightgrey)
 
